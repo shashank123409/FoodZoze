@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-5 pt-5">
+    <h2 class="text-center mb-4">Search Results for "{{ query }}"</h2>
+    <div class="row">
+        {% if results %}
+            {% for dish in results %}
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card shadow-sm">
+                    <img src="{{ dish.image.url }}" class="card-img-top" alt="{{ dish.name }}">
+                    <div class="card-body">
+                        <h5>{{ dish.name }}</h5>
+                        <p>{{ dish.description|truncatechars:50 }}</p>
+                        <h6 class="text-primary">₹{{ dish.price }}</h6>
+                        <a href="/add-to-cart/{{ dish.id }}" class="btn btn-warning btn-sm">Add to Cart</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        {% else %}
+            <div class="col-12 text-center">
+                <p class="alert alert-danger">No dishes found matching your search.</p>
+            </div>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

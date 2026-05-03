@@ -1,0 +1,426 @@
+<!-- {% extends "base.html" %} -->
+{% block content %}
+
+<!-- Carousel Start -->
+<div id="heroCarousel" class="carousel slide carousel-fade" data-ride="carousel" data-interval="5000">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+        <li data-target="#heroCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#heroCarousel" data-slide-to="1"></li>
+        <li data-target="#heroCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Slides -->
+    <div class="carousel-inner">
+        <!-- Slide 1 -->
+        <div class="carousel-item active">
+            <div class="carousel-overlay"></div>
+            <img src="/static/img/carousel-1.png" class="d-block w-100" alt="Best Quality Ingredients">
+            <div class="carousel-caption d-flex align-items-center justify-content-center">
+                <div class="text-center" style="max-width: 100%;">
+                    <h5 class="text-uppercase font-weight-bold mb-3 slide-subtitle" style="color: #ff6b6b;">Fresh & Delicious</h5>
+                    <h1 class="display-3 font-weight-bold mb-4 slide-title" style="color: #faf7f7;">Best <span style="color: #024e04;">Quality</span> Ingredients</h1>
+                    <p class="lead mb-5 d-none d-md-block slide-description" style="color: #f0f0f0;">
+                        We use only the finest ingredients to create mouthwatering dishes that will delight your taste buds and leave you craving for more.
+                    </p>
+                    <div class="slide-buttons">
+                        <a href="{% url 'all_dishes' %}" class="btn btn-warning btn-lg px-5 py-3 mr-3 rounded-pill">View Menu</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="carousel-item">
+            <div class="carousel-overlay"></div>
+            <img src="/static/img/carousel-2.png" class="d-block w-100" alt="World's Best Chef">
+            <div class="carousel-caption d-flex align-items-center justify-content-center">
+                <div class="text-center" style="max-width: 800px;">
+                    <h5 class="text-uppercase font-weight-bold mb-3 slide-subtitle" style="color: #ffd93d;">Expert Chefs</h5>
+                    <h1 class="display-3 font-weight-bold mb-4 slide-title" style="color: #ffffff;">World's <span style="color: #ffd93d;">Best</span> Chef</h1>
+                    <p class="lead mb-5 d-none d-md-block slide-description" style="color: #f0f0f0;">
+                        Our master chefs bring years of expertise and passion to every dish, ensuring an unforgettable dining experience for you and your loved ones.
+                    </p>
+                    <div class="slide-buttons">
+                        <a href="{% url 'all_dishes' %}" class="btn btn-primary btn-lg px-5 py-3 mr-3 rounded-pill">View Menu</a>
+                        <a href="{% url 'all_dishes' %}" class="btn btn-outline-light btn-lg px-5 py-3 rounded-pill">Order Now!</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="carousel-item">
+            <div class="carousel-overlay"></div>
+            <img src="/static/img/carousel-3.png" class="d-block w-100" alt="Fastest Order Delivery">
+            <div class="carousel-caption d-flex align-items-center justify-content-center">
+                <div class="text-center" style="max-width: 800px;">
+                    <h5 class="text-uppercase font-weight-bold mb-3 slide-subtitle" style="color: #6c5ce7;">Quick Service</h5>
+                    <h1 class="display-3 font-weight-bold mb-4 slide-title" style="color: #ffffff;">Fastest Order <span style="color: #00cec9;">Delivery</span></h1>
+                    <p class="lead mb-5 d-none d-md-block slide-description" style="color: #f0f0f0;">
+                        Experience lightning-fast delivery right to your doorstep. Hot, fresh, and on time - every single time!
+                    </p>
+                    <div class="slide-buttons">
+                        <a href="{% url 'all_dishes' %}" class="btn btn-primary btn-lg px-5 py-3 mr-3 rounded-pill">View Menu</a>
+                        <a href="#reservation" class="btn btn-outline-light btn-lg px-5 py-3 rounded-pill">Book Table</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Controls -->
+    <a class="carousel-control-prev" href="#heroCarousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#heroCarousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+<!-- Carousel End -->
+
+<!-- About Start -->
+<div class="about">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <div class="about-img">
+                    <img src="/static/img/about.png" alt="Image">
+                    <button type="button" class="btn-play" data-toggle="modal" data-target="#videoModal">
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="about-content">
+                    <div class="section-header">
+                        <p>About Us</p>
+                        <h2>Cooking Since 1990</h2>
+                    </div>
+                    <div class="about-text">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id gravida condimentum, viverra quis sem.
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id gravida condimentum, viverra quis sem. Curabitur non nisl nec nisi scelerisque maximus. Aenean consectetur convallis porttitor. Aliquam interdum at lacus non blandit.
+                        </p>
+                        <a class="btn custom-btn" href="">Book A Table</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- About End -->
+
+<!-- Video Modal Start-->
+<div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <!-- 16:9 aspect ratio -->
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://youtu.be/00M2Hy4cSJg?si=X3irccl-SWWVhyBM" id="video" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Video Modal End -->
+
+<!-- Feature Start -->
+<div class="feature">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-5">
+                <div class="section-header">
+                    <p>Why Choose Us</p>
+                    <h2>Our Key Features</h2>
+                </div>
+                <div class="feature-text">
+                    <div class="feature-img">
+                        <div class="row">
+                            <div class="col-6">
+                                <img src="/static/img/feature-1.jpg" alt="Image">
+                            </div>
+                            <div class="col-6">
+                                <img src="/static/img/feature-2.jpg" alt="Image">
+                            </div>
+                            <div class="col-6">
+                                <img src="/static/img/feature-3.jpg" alt="Image">
+                            </div>
+                            <div class="col-6">
+                                <img src="/static/img/feature-4.jpg" alt="Image">
+                            </div>
+                        </div>
+                    </div>
+                    <p>
+                        Lorem ipsum dolor sit amet consec adipis elit. Phasel nec preti mi. Curabit facilis ornare velit non vulputa. Aliquam metus tortor, auctor id gravida condime, viverra quis sem. Curabit non nisl nec nisi sceleri maximus 
+                    </p>
+                    <a class="btn custom-btn" href="">Book A Table</a>
+                </div>
+            </div>
+            <div class="col-lg-7">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="feature-item">
+                            <i class="flaticon-cooking"></i>
+                            <h3>World's best Chef</h3>
+                            <p>
+                                Lorem ipsum dolor sit amet elit. Phasel nec preti mi. Curabit facilis ornare velit non vulput metus tortor
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="feature-item">
+                            <i class="flaticon-vegetable"></i>
+                            <h3>Natural ingredients</h3>
+                            <p>
+                                Lorem ipsum dolor sit amet elit. Phasel nec preti mi. Curabit facilis ornare velit non vulput metus tortor
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="feature-item">
+                            <i class="flaticon-medal"></i>
+                            <h3>Best quality products</h3>
+                            <p>
+                                Lorem ipsum dolor sit amet elit. Phasel nec preti mi. Curabit facilis ornare velit non vulput metus tortor
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="feature-item">
+                            <i class="flaticon-meat"></i>
+                            <h3>Fresh vegetables & Meet</h3>
+                            <p>
+                                Lorem ipsum dolor sit amet elit. Phasel nec preti mi. Curabit facilis ornare velit non vulput metus tortor
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="feature-item">
+                            <i class="flaticon-courier"></i>
+                            <h3>Fastest door delivery</h3>
+                            <p>
+                                Lorem ipsum dolor sit amet elit. Phasel nec preti mi. Curabit facilis ornare velit non vulput metus tortor
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="feature-item">
+                            <i class="flaticon-fruits-and-vegetables"></i>
+                            <h3>Ground beef & Low fat</h3>
+                            <p>
+                                Lorem ipsum dolor sit amet elit. Phasel nec preti mi. Curabit facilis ornare velit non vulput metus tortor
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Feature End -->
+
+<!-- Food Start -->
+<div class="food">
+    <div class="container">
+        <div class="row align-items-center">
+        {% for cat in categories %}
+            <div class="col-md-4">
+                <div class="food-item">
+                    <i class="{{cat.icon}}"></i>
+                    <h2>{{cat.name}}</h2>
+                    <p>
+                        {{cat.description}}
+                    </p>
+                    <a href="{% url 'all_dishes' %}?q={{cat.id}}">View Menu</a>
+                </div>
+            </div>
+        {% endfor %}
+        </div>
+    </div>
+</div>
+<!-- Food End -->
+
+<!-- Menu Start -->
+<div class="menu">
+    <div class="container">
+        <div class="section-header text-center">
+            <p>Food Menu</p>
+            <h2>Delicious Food Menu</h2>
+        </div>
+        <div class="menu-tab">
+            <ul class="nav nav-pills justify-content-center">
+                {% for category in menu %}
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="pill" href="#c-{{category.cat_id}}">{{category.cat_name}}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+            <div class="tab-content">
+                {% for category in menu %}
+                <div id="c-{{category.cat_id}}" class="container tab-pane fade">
+                    <div class="row">
+                        {% if category.items|length == 0 %}
+                        <div class="col-md-12 text-center"><h3>No Items under {{category.cat_name}} Yet..</h3></div>
+                        {% else %}
+                        <div class="col-lg-7 col-md-12">
+                        {% for item in category.items %}
+                            <div class="menu-item">
+                                <div class="menu-img">
+                                    <img src="/media/{{item.image}}" alt="Image">
+                                </div>
+                                <div class="menu-text">
+                                    <h3><span><a href="{% url 'dish' id=item.id %}">{{item.name}}</a></span> 
+                                        {% if item.price != item.discounted_price %}
+                                        <strong><del>&dollar;{{item.price}}</del></strong>
+                                        {% endif %}
+                                        <strong>&dollar;{{item.discounted_price}}</strong>
+                                    </h3>
+                                    <p>{{item.ingredients}}</p>
+                                </div>
+                            </div>
+                        {% endfor %}
+                        </div>
+                        <div class="col-lg-5 d-none d-lg-block">
+                            <img src="/media/{{category.cat_img}}" style="height:100%;width:100%;" alt="Image">
+                        </div>
+                        {% endif %}
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Menu End -->
+
+<!-- Team Start -->
+<div class="team">
+    <div class="container">
+        <div class="section-header text-center">
+            <p>Our Team</p>
+            <h2>Our Master Chef</h2>
+        </div>
+        <div class="row">
+            {% for member in team_members %}
+            <div class="col-lg-3 col-md-6">
+                <div class="team-item">
+                    <div class="team-img">
+                        <img src="{{member.image}}" alt="{{member.name}}">
+                        <div class="team-social">
+                            <a href="{{member.twitter}}"><i class="fab fa-twitter"></i></a>
+                            <a href="{{member.facebook}}"><i class="fab fa-facebook-f"></i></a>
+                            <a href="{{member.linkedin}}"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="{{member.instagram}}"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <div class="team-text">
+                        <h2>{{member.name}}</h2>
+                        <p>{{member.position}}</p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+<!-- Team End -->
+
+<!-- Testimonial Start -->
+<div class="testimonial">
+    <div class="container">
+        <div class="owl-carousel testimonials-carousel">
+            {% for testimonial in testimonials %}
+            <div class="testimonial-item">
+                <div class="testimonial-img">
+                    <img src="{{testimonial.image}}" alt="{{testimonial.client_name}}">
+                </div>
+                <p>
+                    {{testimonial.quote}}
+                </p>
+                <h2>{{testimonial.client_name}}</h2>
+                <h3>{{testimonial.profession}}</h3>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+<!-- Testimonial End -->
+
+<style>
+    /* Remove white shadow from carousel controls */
+    .carousel-control-prev,
+    .carousel-control-next {
+        background: transparent !important;
+        box-shadow: none !important;
+        opacity: 0.8;
+        width: 5%;
+    }
+    
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 50%;
+        padding: 20px;
+        background-size: 50%;
+    }
+    
+    .carousel-control-prev:hover,
+    .carousel-control-next:hover {
+        opacity: 1;
+        background: transparent !important;
+    }
+    
+    /* Ensure carousel indicators are clickable */
+    .carousel-indicators li {
+        cursor: pointer;
+    }
+    
+    /* Fix carousel fade effect for Bootstrap 4 */
+    .carousel-fade .carousel-item {
+        transition: opacity 0.6s ease-in-out;
+    }
+    
+    .carousel-fade .carousel-item.active,
+    .carousel-fade .carousel-item-next.carousel-item-left,
+    .carousel-fade .carousel-item-prev.carousel-item-right {
+        opacity: 1;
+    }
+    
+    .carousel-fade .active.carousel-item-left,
+    .carousel-fade .active.carousel-item-right {
+        opacity: 0;
+    }
+    
+    .carousel-fade .carousel-item-next,
+    .carousel-fade .carousel-item-prev,
+    .carousel-fade .carousel-item.active,
+    .carousel-fade .active.carousel-item-left,
+    .carousel-fade .active.carousel-item-prev {
+        transform: translateX(0);
+    }
+    
+    @supports (transform-style: preserve-3d) {
+        .carousel-fade .carousel-item-next,
+        .carousel-fade .carousel-item-prev,
+        .carousel-fade .carousel-item.active,
+        .carousel-fade .active.carousel-item-left,
+        .carousel-fade .active.carousel-item-prev {
+            transform: translate3d(0, 0, 0);
+        }
+    }
+</style>
+
+{% endblock %}

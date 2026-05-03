@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container text-center mt-5">
+    <h2>Complete Your Payment</h2>
+    <p>Total Amount: ₹{{ total }}</p>
+    
+    <button id="rzp-button1" class="btn btn-success btn-lg">Pay with Razorpay</button>
+
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <script>
+    var options = {
+        "key": "rzp_test_SgFeRIG5hq06u1", 
+        "amount": "{{ amount }}", 
+        "currency": "INR",
+        "name": "Kumhrar Point",
+        "description": "Food Order Payment",
+        "order_id": "{{ order_id }}", 
+        "handler": function (response){
+            alert("Payment Successful! ID: " + response.razorpay_payment_id);
+            window.location.href = "/payment-success/";
+        },
+        "theme": { "color": "#fbaf32" }
+    };
+    var rzp1 = new Razorpay(options);
+    document.getElementById('rzp-button1').onclick = function(e){
+        rzp1.open();
+        e.preventDefault();
+    }
+    </script>
+</div>
+{% endblock %}
